@@ -7,9 +7,10 @@ import { FormStudentComponent } from './form-student/form-student.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { TestsListComponent } from './tests-list/tests-list.component';
 import { StudentService } from "./student.services";
+import { GitTamarComponent } from './git-tamar/git-tamar.component';
 
 @NgModule({
-    declarations:[AppComponent,StudentsListComponent, StudentDetailsComponent, FormStudentComponent, TestsListComponent],
+    declarations:[AppComponent,StudentsListComponent, StudentDetailsComponent, FormStudentComponent, TestsListComponent, GitTamarComponent],
     imports:[BrowserModule, FormsModule, ReactiveFormsModule],
     providers:[StudentService],
     bootstrap:[AppComponent]
