@@ -1,0 +1,30 @@
+<div class="card" *ngIf="student else noStudent">
+    <div class="card-body" *ngIf="student.active else noActive">
+        details of the student:<br>
+        <!-- Show details -->
+        id: {{student.id}}<br>
+        name: {{student.name}}<br>
+        address: {{student.address}}<br>
+        phone: {{student.phone}}<br>
+        average of the mark: {{student.avgOfMarks}}
+        maslool:{{student.maslool}}
+        <button (click)="SaveNewStudent()">Close</button>
+
+        <!-- Setting -->
+        <!-- <input type="number" [value]="student.id"/><br>
+        <input type="text"   [value]="student.name" /><br>
+        <input type="text"   [value]="student.address" /><br>
+        <input type="text"   [value]="student.phone"/><br>
+        <input type="text"   [value]="student.active" /><br>
+        <input type="number" [value]="student.avgOfMarks"/><br><br>
+        <button (click)="SaveNewStudent()">Save</button> -->
+    </div>
+</div>
+<ng-template #noStudent>
+    <p>No sugested student</p>
+</ng-template>
+<ng-template #noActive>
+    <div>The student isnt active from :
+        {{student.dateGo}}
+    </div>
+</ng-template>

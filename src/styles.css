@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import"~bootstrap/dist/css/bootstrap.css";
+
+.contain{
+    display: flex;
+    justify-content:space-around ;
+}
+.contain students-list{
+    width: 60vw;
+}
+.contain tests-list{
+    width: 20vw;
+}
+.title{
+    text-align: center;
+}

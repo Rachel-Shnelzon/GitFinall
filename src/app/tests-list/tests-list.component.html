@@ -1,0 +1,16 @@
+<div *ngIf="student!=undefined else noStudent">The tests list of {{student.name}}
+    <p *ngIf="testsList!=undefined else notests">The avg is {{studentService.getAvgOfStudent(student.id)}}
+    </p>
+    <ul class="list-group">
+        <li *ngFor="let test of testsList" class="list-group-item">
+            Id:{{test.id}}
+            Mark:{{test.mark}}
+        </li>
+    </ul>
+</div>
+<ng-template #noStudent>
+    <p>No selected student</p>
+</ng-template>
+<ng-template #notests>
+    <p>Don't have tests</p>
+</ng-template>

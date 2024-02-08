@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="title">
+        <h1>{{calc()}}</h1>
+        <h2>{{title}}</h2>
+        <!-- <a href='#'>link</a> -->
+    </div>
+    <div class="contain">
+        <students-list (onSelectStudentLine)="selectStudentShowTests($event)" (onDelete)="delete($event)"></students-list>
+        <tests-list [testsList]="testsList" [student]="studentListTests"></tests-list>
+    </div>
+</div>
